@@ -1,11 +1,10 @@
-# Add cloudflare gpg key
-curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
-
-
-# Add this repo to your apt repositories
-echo "deb [signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
-
-
-# Install
-sudo apt-get update && sudo apt-get install cloudflare-warp
-		
+<dict>
+  <key>organization</key>
+  <string>greenb0x</string>
+  <key>auth_client_id</key>
+  <string>8464d45130bed6b17b189cb6be9fd1f6.access</string>
+  <key>auth_client_secret</key>
+  <string>a625eb5a1db05955a2b4f3e4f9fa321c87a4de7d6e948cd043b910967bf319f3</string>
+  <key>warp_connector_token</key>
+  <string>eyJhIjoiYmVmOTQ5ZWM3MDFmNGU2MjVkNTRiNmRhOTg3MTQyZmUiLCJ0IjoiNjQ3NjEzYWItN2RiNi00ZDA2LTgxZGItNTMzOTAwMmQ0ZmRmIiwicyI6ImM4VlFRTitsTUh2amdkY25CdHRwWHg3QTM3Q3JuU1ZEcTlvMW80NnlqUnRWck4rWlVUano5ZVptZ1UvQjZkOUcyenFUK2tCdUtjUGd0NEhxUzdSTUZBPT0ifQ==</string>
+</dict>
