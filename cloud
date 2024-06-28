@@ -1,5 +1,5 @@
-curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && 
+curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg 
 
-sudo dpkg -i cloudflared.deb && 
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list 
 
-sudo cloudflared service install eyJhIjoiYmVmOTQ5ZWM3MDFmNGU2MjVkNTRiNmRhOTg3MTQyZmUiLCJ0IjoiNjkxZTMzZjYtZWMxMS00YTM4LTkxMGMtODhhMjI1NGVlZWVjIiwicyI6IllUYzFNek15TTJVdE1XUmhaQzAwTTJaaUxUbGhabUV0Tm1Zek5XTTBZV1l6TVdRMyJ9
+sudo apt-get update && sudo apt-get install cloudflare-warp
